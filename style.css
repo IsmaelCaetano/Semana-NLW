@@ -1,0 +1,86 @@
+      /* CSS Cascating StyleSheet*/
+      */*seletor universal tudo que colocar aqui vai ser aplicado para todos*/{
+        margin: 0;
+      }
+      html,
+      body {
+        --black: hsl(240, 6%, 13%);
+        --grey: hsl(240, 9%, 89%);/*variavel no css, no caso essa ta definindo a cor grey*/
+
+        height: 100%; /* Altura*/
+        font-family: 'Roboto', sans-serif;
+        -webkit-font-smoothing: antialiased;/*faz conque so em navegadores com essa informação funcione */
+      }
+      body {
+        display: grid; /*posicionamento dos elementos em vertical e horizontal*/
+        place-items: center; /*centralização dos itens*/
+      }
+      main{
+        background: url(images/background.svg);
+        width: 375px;/*LARGURA */
+        height: 812PX;/*ALTURA */
+      }
+
+      .container{
+        max-width: 250px;/*largura maxima*/
+        margin-left: auto;/*margim altomatica da esquerda */
+        margin-right: auto;/*margim altomatica da direita  */
+        text-align: center;/*alinhamento ao centro da tela */
+
+        color: var(--grey);
+      }
+
+      .avatar{
+        width: 10rem;/* o rem tem ralação com o pixel da pagina*/
+        margin: 11.5rem auto 0;/*posição da imagem da foto*/
+
+        position: relative;/*dando o limite para a posição das coisas no avatar
+        */
+      }
+
+      .avatar samp{
+        position: absolute;/*colocando uma pilha de imagens*/
+        top: -15px;/*deslocando o selo um pouco para cima*/
+        z-index: 1;/*eixo de profundidade*/
+      }
+
+      .avatar > img/*pega a imagem do primeiro nivel*/{
+        width: 10rem;
+        height: 11.5rem;
+        object-fit: cover;/*imagem se adapta as definições que foi colocada*/
+
+        clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);/*forma da foto*/
+      }
+
+      h1 {
+        font-size: 1.5rem; /*Tamanho da fonte*/
+
+        margin-top: 1.5rem;
+      }
+
+      a {
+        color: var(--grey); /*cor do texto/tag*/
+        text-decoration: none; /*tira a decoração do texto/link*/
+
+        margin-top: 0.5rem;
+
+        display: flex;
+        gap: 0.75rem;
+
+        justify-content: center;
+        align-items: center;
+      }
+
+      p{
+        margin-top: 2rem;
+      }
+
+      ul{
+        margin-top: 4rem;
+        list-style: none;/*tira as bolinas da lista*/
+        padding: 0;
+        display: flex;/*coloca os elementos um ao lado do outro no eixo x ou  vertical ou main*/
+        gap: 0.5rem;/*espaçamento entre os elementos*/
+        justify-content: center;/*alinhamento central no flex*/
+
+      }
